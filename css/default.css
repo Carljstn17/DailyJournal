@@ -3,13 +3,30 @@ html{
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font-size: 16px;
-  color: #DCDCDC;
-  background-color:#101010;
+  color: #696969;
+  background-color:#080808;
 }
 li, a{
   text-decoration: none;
   cursor: pointer;
   list-style: none;
   font-style: italic;
-  color: rgb(68, 68, 68);
+  color: #696969;
+  transition: .2s;
+}
+a:hover{
+  color: #C0C0C0;
+}
+h1,h2{
+  color: #DCDCDC;
+}
+
+.btn{
+  background-color: #101010;
+  transition: .2s;
+}
+
+.btn:hover{
+  background-color: #080808;
+  color: #C0C0C0;
 }

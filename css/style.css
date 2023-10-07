@@ -12,9 +12,8 @@ body{
 .container{
   width: 300px;
   padding: 4rem;
-  background-color: transparent;
+  background-color: #181818;
   border-radius: 8px;
-  border: 2px solid  rgb(25, 25, 25);
 }
 .login-form,.signup-form{
   margin-left: -1rem;
@@ -37,10 +36,10 @@ input {
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid #5b5b5b;
   outline: none;
   font-size: 16px;
-  
+  background-color: #101010;
+  border-radius: 6px;
 }
 label {
   position: absolute;
@@ -49,26 +48,22 @@ label {
   transition: .3s;
   pointer-events: none;
   font-size: 16px;
-  color: #5b5b5b;
+  color: #696969;
 }
 input:focus ~ label, input:valid ~ label {
-  top: -15px;
-  color: #000000;
-}
-input:focus{
-  border-bottom: 1px solid #000000;
+  top: -20px;
+  color: 	#C0C0C0;
 }
 h2{
   margin-bottom: 4rem;
 }
 .btn{
-  padding: 8px 2rem;
+  padding: 10px 2rem;
   text-align: center;
   border: none;
-  background-color: #000000;
-  color: white;
+  color: #696969;
   margin-top: 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   width: 107%;
 }
 .signup, .forget{
@@ -79,10 +74,6 @@ h2{
   margin-top: 4px;
   margin-right: -14px;
   float: right;
-}
-
-.btn:hover{
-  background-color: rgb(17, 17, 17);
 }
 
 .signup-form {

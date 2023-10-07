@@ -26,7 +26,7 @@ session_start();
             <a href="#" id="switch-to-forget" class="forget">forget password?</a>
         </div>
         <div class="form-group">
-            <input type="submit" value="Login" class="btn">
+            <center><input type="submit" value="Login" class="btn"></center>
         </div>
         <p>Not registered yet? <a href="#" id="switch-to-signup">Create an account</a></p>
     </form>
