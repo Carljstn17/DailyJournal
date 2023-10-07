@@ -1,0 +1,101 @@
+body{
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 6rem;
+  background-image: url('../media/full-logo.png');
+  background-repeat: no-repeat;
+  background-position: 3rem 11rem;
+  background-attachment: fixed;
+}
+.container{
+  width: 300px;
+  padding: 4rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid  rgb(25, 25, 25);
+}
+.login-form,.signup-form{
+  margin-left: -1rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-container div {
+  display: none;
+}
+
+.form-container .active {
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #5b5b5b;
+  outline: none;
+  font-size: 16px;
+  
+}
+label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: .3s;
+  pointer-events: none;
+  font-size: 16px;
+  color: #5b5b5b;
+}
+input:focus ~ label, input:valid ~ label {
+  top: -15px;
+  color: #000000;
+}
+input:focus{
+  border-bottom: 1px solid #000000;
+}
+h2{
+  margin-bottom: 4rem;
+}
+.btn{
+  padding: 8px 2rem;
+  text-align: center;
+  border: none;
+  background-color: #000000;
+  color: white;
+  margin-top: 1rem;
+  border-radius: 4px;
+  width: 107%;
+}
+.signup, .forget{
+  float: left;
+  margin-left: -2rem;
+}
+.forget{
+  margin-top: 4px;
+  margin-right: -14px;
+  float: right;
+}
+
+.btn:hover{
+  background-color: rgb(17, 17, 17);
+}
+
+.signup-form {
+  display: none;
+}
+
+/* animation */
+.fade-in {
+  opacity: 1;
+  transition: opacity ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}

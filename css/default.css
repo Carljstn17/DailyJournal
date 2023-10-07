@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 16px;
+  color: #DCDCDC;
+  background-color:#101010;
+}
+li, a{
+  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+  font-style: italic;
+  color: rgb(68, 68, 68);
+}
