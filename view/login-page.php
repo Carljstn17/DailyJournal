@@ -15,7 +15,7 @@ session_start();
 <body>
   <div class="container">
     <form id="login-form" class="login-form" action="../controller/login.php" method="post">
-        <h2>/welcome</h2>
+        <h2 class="primary">/welcome</h2>
         <div class="form-group">
             <input type="text" id="user_name" name="user_name" required>
             <label for="user_name">Username</label>
