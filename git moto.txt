@@ -14,7 +14,7 @@ Everytime mag stop coding:
 	-add changes or file
 2. git commit -m "Your commit message"
 	-commit the changes or added file
-3. git push origin master
+3. git push upstream master
 	-push all your changes
 
 pag ayaw gumana ng origin everytime mag push or pull ka pm agad
