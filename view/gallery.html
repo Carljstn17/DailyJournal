@@ -6,24 +6,64 @@
   <title>DailyJournal</title>
   <link rel="stylesheet" href="../css/default.css">
   <link rel="stylesheet" href="../css/gallery.css">
-</head>
-<body>
-  <div class="container">
-    <div class="content">
-      <p class="h1">/Gallery</p>
-    </div>
-    
-    <div class="content">
-      <p>A picture is a poem without <span class="primary bold">words</span></p>
-    </div>
 
-    <div class="content">
-      <p class="h2">theme <span class="right">10/09/23</span></p>
-      <div class="img-container">
-        <img src="#" alt="">
-      </div>
-    </div>
-  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $.get("nav.html", function(data){
+      $("#nav-container").replaceWith(data);
+  });
+  </script>
   
+</head>
+<body data-page="gallery">
+  <main>
+    <div class="container">
+      <div class="content">
+        <h1>/Gallery</h1>
+      </div>
+      
+      <div class="content">
+        <p class="desc">A picture is a poem without <span class="primary">words</span></p>
+      </div>
+      
+      <div class="content">
+        <p class="h2">Photography <span class="right">10/09/23</span></p>
+        <img src="../media/capture.jpeg" alt="">
+      </div>
+      <p class="secondary">Capturing Momment</p>
+
+      <center>
+        <ul class="nav-content">
+          <li id="change-img1">One</li>
+          <li id="change-img2">Two</li>
+          <li id="change-img3">Three</li>
+        </ul>
+      </center>
+
+      <div class="content">
+        <p class="h2"><span id="title">Life cycle</span> <span class="right">10/09/23</span></p>
+
+        <div class="grid-container">
+          <img class="left-image" src="../media/img1.jpg" alt="Left Image" id="myImage">
+          <div class="right-images">
+              <img class="right-image" src="../media/img3.jpeg" alt="Right Image 1" id="myImage2">
+              <img class="right-image" src="../media/img4.jpg" alt="Right Image 2" id="myImage3">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="content">
+      <p class="h2">© 2023 Project <span class="right">10/09/23</span></p>
+    </div>
+  </footer>
+
+  <div id="nav-container"></div>
+
+  <script src="/js/gallery.js"></script>
+
 </body>
 </html>
