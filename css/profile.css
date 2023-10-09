@@ -95,6 +95,10 @@ body {
   background-color: #222; /* Dark container background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   grid-area: "description";
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .iframe{
