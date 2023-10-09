@@ -19,7 +19,7 @@ const twoButtonElement = document.getElementById("change-img2");
 twoButtonElement.addEventListener('click', function(){ 
   secondTitle.textContent = "Underworld";
   fourImageElement.src = '../media/img2.jpg';
-  fiveImageElement.src = '../media/img6.jpg'; 
+  fiveImageElement.src = '../media/img6.jpeg'; 
   sixImageElement.src = '../media/img5.jpg'; 
 });
 
