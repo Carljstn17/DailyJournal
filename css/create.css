@@ -50,3 +50,19 @@ textarea {
   padding: 3px 10px;
   border: 2px solid#303030;
 }
+
+input, select{
+  background-color:#181818;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.picker{
+  margin-bottom: 4px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}

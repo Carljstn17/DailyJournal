@@ -15,6 +15,7 @@ div.content{
 .h1{
   font-size: 16px;
 }
+
 .desc{
   padding: 26px 0;
   font-size: 26px;
@@ -168,4 +169,46 @@ Window response
   ul li{
     display: block;
   }
+}
+
+
+/* Playlist */
+.line{
+  margin-top: 3rem;
+  border-bottom: 1px solid #696969;
+  padding-bottom: 8px;
+  font-size: 16px;
+}
+audio {
+  background-color: #181818; /* Set your desired background color */
+  padding: 10px; /* Add some padding */
+  width: 100%; /* Make the player fill its container */
+}
+
+/* Adjust the appearance of the controls */
+audio::-webkit-media-controls-panel {
+  background-color: #181818; /* Set your desired background color */
+  border: 1px solid;
+  border-radius: 3rem;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button { /* Set the play and pause button color */
+  color: #fff; /* Set the play and pause button text color */
+  border: none; /* Remove the border */
+}
+
+/* Style the time indicators */
+audio::-webkit-media-controls-timeline {
+  background-color: #181818; /* Set the background color for the timeline */
+  border: none; /* Remove the border */
+}
+
+/* Style the progress bar */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button {
+  color: #F0F0F0; /* Set the text color for time indicators and seek buttons */
+  border: none;
 }
