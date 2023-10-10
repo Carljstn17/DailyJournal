@@ -3,7 +3,7 @@ git clone https://github.com/Carljstn17/DailyJournal.git --branch master --singl
 Everytime mag start coding:
 1. git add commit muna kung may hindi kapa na push para di mawala
 	-no need to push agad, pull nlng muna
-2. git pull upstream master
+2. git pull origin master
 	-pull all changes from github branch master
 3. git status 
 	-dapat nasa master pag hindi chat moko
@@ -17,4 +17,3 @@ Everytime mag stop coding:
 3. git push upstream master
 	-push all your changes
 
-pag ayaw gumana ng origin everytime mag push or pull ka pm agad

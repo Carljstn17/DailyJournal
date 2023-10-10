@@ -18,13 +18,12 @@
       position: fixed;
       left: 50%;
       transform: translateX(-50%);
-      width: 300px;
+      width: 220px;
       justify-content: space-around;
       align-items: center;
       bottom: 2.5%;
-      min-width: 250px;
       opacity:.9;
-      border: 1px solid #696969;
+      border: 1px solid#303030;
     }
     
     .nav a {
@@ -41,9 +40,9 @@
       opacity: 1;
     }
     
-    a.active {
+    a.active{
       background-color:#DCDCDC;
       color: #181818;
       border-radius: 2rem;
-      opacity: 100%;
+      opacity:1;
     }

@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 div.container ,footer{
   display: grid;
   justify-content: center;
@@ -7,16 +10,14 @@ div.container ,footer{
 div.content{
   display: grid;
   width: 516px;
+  font-size: 14px;
 }
-h1{
+.h1{
   font-size: 16px;
 }
 .desc{
-  padding: 34px 0;
+  padding: 26px 0;
   font-size: 26px;
-}
-.h2{
-  font-size: 14px;
 }
 .right{
   float: right;
@@ -76,4 +77,95 @@ img{
 
 footer{
   padding: 34px 0;
+}
+
+/*Responsive
+
+Window response
+*/
+@media (max-width: 520px){
+  div.container ,footer{
+    display: grid;
+    justify-content: left;
+    align-items: left;
+    padding: 0 8px;
+    margin: 0;
+  }
+  div.content img,p{
+    width: 444px;
+  }
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .left-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-images {
+    row-gap: 12px;
+  }
+
+  .right-image {
+    max-height: none;
+  }
+}
+
+/* Normal Screens (hdpi): 480x800 (WVGA) */
+@media (max-width: 480px){
+  div.container img, p{
+    width: 430px;
+  }
+  ul li{
+    text-align: left;
+    display: inline-block;
+  }
+  ul{
+    margin-left: -5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .left-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-images {
+    row-gap: 12px;
+  }
+
+  .right-image {
+    max-height: none;
+  }
+}
+
+
+/* Normal Screens (mdpi): 320x480 pixels (HVGA) */
+@media (max-width: 320px){
+  div.content img,p{
+    width: 275px;
+  }
+  ul{
+    margin-left: -16rem;
+  }
+}
+
+
+/* Small Screens (ldpi): 240x320 pixels (QVGA) */
+@media (max-width: 240px){
+  div.content img,p{
+    width: 195px;
+  }
+  ul{
+    margin-left: -3rem;
+  }
+  ul li{
+    display: block;
+  }
 }
