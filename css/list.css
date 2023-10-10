@@ -1,0 +1,23 @@
+body{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+header,main,footer{
+  justify-content: center;
+  align-items: center;
+  width: 516px;
+}
+.desc{
+  padding: 26px 0;
+  font-size: 26px;
+}
+div.container{
+  margin-bottom: 2rem;
+}
+div.row a div.row-text{
+  background-color: #181818;
+  padding: 2px 1rem;
+  border-radius: 2px;
+}
