@@ -28,13 +28,24 @@
       </div>  
 
   <script>
-    let activePage = document.body.getAttribute("data-page");
-    let navlinks = document.querySelectorAll("nav a");
-    for (let link of navlinks){
-    if(link.getAttribute("data-page") == activePage){
-        link.classList.add("active");
-    }
-  }
+    // Get the current page URL
+  const currentPage = document.body.getAttribute("data-page");
+    const navLinksGlobal = document.querySelectorAll(".nav a");
+    const navLinksLocal = document.querySelectorAll(".nav-con .dot");
+
+    navLinksGlobal.forEach(link => {
+        if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+
+    navLinksLocal.forEach(dot => {
+        if (dot.getAttribute("data-page") === currentPage) {
+            dot.classList.add("active");
+        }
+    });
+
+
   </script>
 </body>
 </html>
