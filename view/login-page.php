@@ -15,7 +15,7 @@ session_start();
 <body>
   <div class="container">
     <form id="login-form" class="login-form" action="../controller/login.php" method="post">
-        <h2>/welcome</h2>
+        <h2 class="primary">/welcome</h2>
         <div class="form-group">
             <input type="text" id="user_name" name="user_name" required>
             <label for="user_name">Username</label>
@@ -48,35 +48,6 @@ session_start();
     </form>
 </div>
 
-  <script>
-   document.getElementById("switch-to-signup").addEventListener("click", function(event) {
-  event.preventDefault();
-
-  document.getElementById("login-form").classList.add("fade-out");
-  document.getElementById("signup-form").classList.remove("fade-out");
-
-  setTimeout(function() {
-    document.getElementById("login-form").style.display = "none";
-    document.getElementById("signup-form").style.display = "block";
-    document.getElementById("login-form").classList.remove("fade-out");
-    document.getElementById("signup-form").classList.add("fade-in");
-  }, 500);
-});
-
-document.getElementById("switch-to-login").addEventListener("click", function(event) {
-  event.preventDefault();
-
-  document.getElementById("signup-form").classList.add("fade-out");
-  document.getElementById("login-form").classList.remove("fade-out");
-
-  setTimeout(function() {
-    document.getElementById("signup-form").style.display = "none";
-    document.getElementById("login-form").style.display = "block";
-    document.getElementById("signup-form").classList.remove("fade-out");
-    document.getElementById("login-form").classList.add("fade-in");
-  }, 500);
-});
-
-  </script>
+<script src="../js/login.js"></script>
 </body>
 </html>

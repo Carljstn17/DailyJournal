@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create</title>
+  <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="../css/create.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $.get("nav.html", function(data){
+      $("#nav-container").replaceWith(data);
+  });
+  </script>
+</head>
+<body data-page="list">
+  <main>
+
+  </main>
+  <footer>
+
+  </footer>  
+
+  <div id="nav-container"></div>
+ 
+</body>
+</html>

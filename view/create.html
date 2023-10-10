@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create</title>
+  <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="../css/create.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $.get("nav.html", function(data){
+      $("#nav-container").replaceWith(data);
+  });
+  </script>
+</head>
+<body data-page="create">
+  <header>
+    <p>Create Journal</p>
+    <p class="secondary title">Title | <span class="right">Date</span></p>
+  </header>
+
+  <main>
+    <form action="">
+      <textarea name="textarea" id="textarea" class="default"></textarea>
+      <input type="submit" value="Publish" class="btnn default">
+    </form>
+  </main>
+
+  <footer>
+    <p class="h2">© 2023 Project <span class="right">10/09/23</span></p>
+  </footer>  
+
+  <div id="nav-container"></div>
+
+</body>
+</html>

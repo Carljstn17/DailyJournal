@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
 html{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   font-size: 16px;
   color: #696969;
-  background-color:#080808;
+  background-color:#101010;
+  font-weight: 500;
 }
+
 li, a{
   text-decoration: none;
   cursor: pointer;
@@ -17,10 +21,15 @@ li, a{
 a:hover{
   color: #C0C0C0;
 }
-h1,h2{
-  color: #DCDCDC;
+.primary{
+  color: #F0F0F0;
 }
-
+.secondary{
+  color: #C0C0C0;
+}
+.default{
+  color: #696969;
+}
 .btn{
   background-color: #101010;
   transition: .2s;

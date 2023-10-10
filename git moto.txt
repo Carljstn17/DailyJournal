@@ -1,0 +1,19 @@
+git clone https://github.com/Carljstn17/DailyJournal.git --branch master --single-branch
+
+Everytime mag start coding:
+1. git add commit muna kung may hindi kapa na push para di mawala
+	-no need to push agad, pull nlng muna
+2. git pull origin master
+	-pull all changes from github branch master
+3. git status 
+	-dapat nasa master pag hindi chat moko
+
+Everytime mag stop coding:
+1. git add * or specific file
+	-ex. git add gallery.php
+	-add changes or file
+2. git commit -m "Your commit message"
+	-commit the changes or added file
+3. git push upstream master
+	-push all your changes
+
