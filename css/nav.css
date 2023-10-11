@@ -3,9 +3,10 @@
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
-    'GRAD' 0,
-    'opsz' 26;
+    'GRAD' 1,
+    'opsz' 100;
     opacity: 1;
+    
   }
   
   
@@ -14,35 +15,41 @@
       background-color: #181818;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       padding: 5px;
-      border-radius: 3rem;
+      border-radius: 5rem;
+      gap: 7px;
       position: fixed;
       left: 50%;
       transform: translateX(-50%);
-      width: 220px;
-      justify-content: space-around;
+      width: 300px;
+      justify-content: space-evenly;
       align-items: center;
       bottom: 2.5%;
-      opacity:.9;
-      border: 1px solid#303030;
+      min-width: 250px;
+      opacity:inherit;
+   
     }
     
     .nav a {
       text-decoration: none;
       list-style-type: none;
-      padding: 8px 10px;
-      opacity: 1;
-      color:#C0C0C0;
+      padding: 10px;
+     
+      color: #ccc;
     }
     
     nav a:hover {
       background-color:#101010;
-      border-radius: 2rem;
+      border-radius: 100%;
       opacity: 1;
     }
     
     a.active{
       background-color:#DCDCDC;
       color: #181818;
-      border-radius: 2rem;
+      border-radius: 100%;
       opacity:1;
+    }
+
+    .nav .material-symbols-outlined {
+      border-radius: 50%;
     }
