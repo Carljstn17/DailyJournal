@@ -90,3 +90,7 @@ h2{
   opacity: 0;
   transition: opacity 0.9s ease-in-out;
 }
+
+a:hover{
+  color: #C0C0C0;
+}

@@ -14,13 +14,10 @@ li, a{
   text-decoration: none;
   cursor: pointer;
   list-style: none;
-  font-style: italic;
   color: #696969;
   transition: .2s;
 }
-a:hover{
-  color: #C0C0C0;
-}
+
 .primary{
   color: #F0F0F0;
 }

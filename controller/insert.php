@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     mysqli_close($conn);
 
     // Redirect to the desired location
-    header("location: ../view/list.php");
+    header("location: ../view/list-page.php");
     exit(); // Add exit() to ensure no further code is executed after the redirection
 } else {
     echo "Invalid request method";

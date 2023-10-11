@@ -34,10 +34,8 @@ check_login($conn);
     <label for="combo">Category </label>
     <select id="combo" name="category" class="default">
       <option value="Personal">Personal</option>
+      <option value="Professional">Professional</option>
       <option value="Travel">Travel</option>
-      <option value="Fitness">Fitness</option>
-      <option value="Creative">Creative</option>
-      <option value="Nature">Nature</option>
     </select>
 
     <label for="date">Select a date:</label>

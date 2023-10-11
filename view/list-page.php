@@ -5,11 +5,6 @@ include("../controller/function.php");
 include_once("../controller/connection.php");
 
 check_login($conn);
-$user_id=$_SESSION['user_id'];
-
-$sql = "SELECT * FROM form Where user_id=$user_id ORDER BY form_id DESC";
-$result = $conn->query($sql);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,36 +30,86 @@ $result = $conn->query($sql);
   </header>
 
   <main>
-    <div class="container">
-      <p class="secondary">Personal</p>
+    <p class="secondary">Personal</p>
 
-      <?php while($row = $result->fetch_assoc()){ ?>
+    <p>In the quiet moments, soul speaks loudest.</p>
+    <div class="container">
+
+      <?php
+      $user_id=$_SESSION['user_id'];
+
+      $query = "SELECT * FROM form WHERE user_id = '$user_id' AND category = 'Personal' ORDER BY form_id DESC";
+      $result = mysqli_query($conn, $query);
+      
+      while($row = mysqli_fetch_assoc($result)){
+      ?>
       <div class="row">
-            <a href="viewform.php?form_id=<?php echo"$form_id";?>" class="form-link">
+            <a href="viewform.php?form_id=<?php echo $row['form_id'];?>" class="form-link">
                 <div class="row-text">
                 <p class="form-title"><?php echo $row['title']; ?></p>
-                <p class="form-author right">Date: <?php echo $row['date']; ?></p>
-                <p class="form-author">Entry no: <?php echo $row['form_id']; ?></p>
+                <p class="form-date primary"><?php echo $row['date']; ?></p>
                 </div>
             </a>
-      </div> 
-      <?php }?>     
+        </div>
+        <?php
+      }
+
+      ?>
     </div>
 
-    <div class="container">
-      <p class="secondary">Travel</p>
-    </div>
+    <p class="secondary">Professional</p>
 
+    <p>Excellence is not a skill. It is an attitude.</p>
     <div class="container">
-    <p class="secondary">Fitness</p>
-    </div>
 
-    <div class="container">
-    <p class="secondary">Creative</p>
-    </div>
+      <?php
+      $user_id=$_SESSION['user_id'];
 
+      $query = "SELECT * FROM form WHERE user_id = '$user_id' AND category = 'Professional' ORDER BY form_id DESC";
+      $result = mysqli_query($conn, $query);     
+
+      while($row = mysqli_fetch_assoc($result)){
+      ?>
+      <div class="row">
+            <a href="viewform.php?form_id=<?php echo $row['form_id'];?>" class="form-link">
+                <div class="row-text">
+                <p class="form-title"><?php echo $row['title']; ?></p>
+                <p class="form-date primary"><?php echo $row['date']; ?></p>
+                </div>
+            </a>
+        </div>
+        <?php
+      }
+      
+
+      ?>
+    </div>
+  
+
+    <p class="secondary">Travel</p>
+
+    <p>Sweat is the ink, effort is the story.</p>
     <div class="container">
-    <p class="secondary">Nature</p>
+
+      <?php
+      $user_id=$_SESSION['user_id'];
+
+      $query = "SELECT * FROM form WHERE user_id = '$user_id' AND category = 'Travel' ORDER BY form_id DESC";
+      $result = mysqli_query($conn, $query);
+      
+      while($row = mysqli_fetch_assoc($result)){
+      ?>
+      <div class="row">
+            <a href="viewform.php?form_id=<?php echo $row['form_id'];?>" class="form-link">
+                <div class="row-text">
+                <p class="form-title"><?php echo $row['title']; ?></p>
+                <p class="form-date primary"><?php echo $row['date']; ?></p>
+                </div>
+            </a>
+        </div>
+        <?php
+      }
+      ?>
     </div>
 
   </main>
@@ -74,6 +119,7 @@ $result = $conn->query($sql);
   </footer>  
 
   <div id="nav-container"></div>
- 
+      
+  
 </body>
 </html>

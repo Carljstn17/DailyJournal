@@ -5,8 +5,6 @@ body{
   padding: 0 16px;
 }
 header,main,footer{
-  justify-content: center;
-  align-items: center;
   width: 516px;
 }
 .desc{
@@ -15,9 +13,30 @@ header,main,footer{
 }
 div.container{
   margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+	grid-gap: 10px;
 }
-div.row a div.row-text{
-  background-color: #181818;
-  padding: 2px 1rem;
-  border-radius: 2px;
+.row{
+	display: flex;
+	background-color: #181818;
+	transition: 0.2s all ease-in;
+	text-overflow: ellipsis;
+	overflow: hidden;
+  padding: 0 2rem;
+}
+.form-link{
+  width: 100%;
+}
+.form-title{
+  font-size: 26px;
+}
+.form-date{
+ opacity: .1;
+ margin-top: -1rem;
+}
+
+.row:hover{
+	scale: 1.05;
+	transition: 0.2s all ease-in;
 }
