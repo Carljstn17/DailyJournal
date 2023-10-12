@@ -6,10 +6,13 @@ div.container ,footer{
   justify-content: center;
   align-items: center;
   padding: 0 16px;
+  width: 516px;
+  margin: 0 auto;
 }
 div.content{
   display: grid;
-  width: 516px;
+  align-items: center;
+  width: 100%;
   font-size: 14px;
 }
 
@@ -24,20 +27,16 @@ div.content{
   display: inline-block;
 }
 /*navigation*/
-li{
+.nav-content{
   text-align: center;
   display: inline-block;
-  margin-right: 20px;
   cursor: pointer;
-  font-style: normal;
-  padding: 8px 10px;
 }
 
-.nav {
-  list-style: none;
-  padding: 0;
-  
+.nav-link{
+  float: right;
 }
+
 li:hover{
   background-color:#080808;
   border-radius: 8px;
@@ -57,8 +56,8 @@ img{
 }
 
 .left-image {
-  height: 620px;
-  width: 300px;
+  height: auto;
+  width: 100%;
 }
 
 .right-images {
@@ -79,94 +78,32 @@ footer{
 
 /*Responsive
 
-Window response
-*/
-@media (max-width: 520px){
-  div.container ,footer{
-    display: grid;
-    justify-content: left;
-    align-items: left;
-    padding: 0 8px;
-    margin: 0;
-  }
-  div.content img,p{
-    width: 444px;
-  }
-  .grid-container {
-    flex-direction: column;
-  }
-
-  .left-image {
+/* Apply responsive design using media queries */
+@media screen and (max-width: 546px) {
+  div.container, footer {
     width: 100%;
-    height: auto;
+    
   }
 
-  .right-images {
-    row-gap: 12px;
+  div.content {
+    font-size: 12px;
   }
 
-  .right-image {
-    max-height: none;
+  img {
+    width: 100%; /* Make images full-width on smaller screens */
   }
-}
 
-/* Normal Screens (hdpi): 480x800 (WVGA) */
-@media (max-width: 480px){
-  div.container img, p{
-    width: 430px;
-  }
-  ul li{
-    text-align: left;
-    display: inline-block;
-  }
-  ul{
-    margin-left: -5rem;
-  }
-}
-
-@media (max-width: 480px) {
   .grid-container {
-    flex-direction: column;
-  }
-
-  .left-image {
+    flex-direction: column; /* Change the layout to a column on smaller screens */
     width: 100%;
-    height: auto;
   }
 
-  .right-images {
-    row-gap: 12px;
+  .left-image, .right-images {
+    width: 100%; /* Make left and right images full-width on smaller screens */
   }
 
-  .right-image {
-    max-height: none;
-  }
 }
 
-
-/* Normal Screens (mdpi): 320x480 pixels (HVGA) */
-@media (max-width: 320px){
-  div.content img,p{
-    width: 275px;
-  }
-  ul{
-    margin-left: -16rem;
-  }
-}
-
-
-/* Small Screens (ldpi): 240x320 pixels (QVGA) */
-@media (max-width: 240px){
-  div.content img,p{
-    width: 195px;
-  }
-  ul{
-    margin-left: -3rem;
-  }
-  ul li{
-    display: block;
-  }
-}
 
 
 /* Playlist */
