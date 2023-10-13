@@ -40,6 +40,7 @@ input {
   font-size: 16px;
   background-color: #101010;
   border-radius: 6px;
+  color: #696969;
 }
 label {
   position: absolute;
@@ -52,7 +53,7 @@ label {
 }
 input:focus ~ label, input:valid ~ label {
   top: -20px;
-  color: 	#C0C0C0;
+  color: 	#8f8989;
 }
 h2{
   margin-bottom: 4rem;

@@ -23,6 +23,7 @@ check_login($conn);
   </script>
 </head>
 <body data-page="list">
+  <div class="body">
   <header>
     <p>List</p>
 
@@ -117,7 +118,8 @@ check_login($conn);
   <footer>
 
   </footer>  
-
+  </div>
+  
   <div id="nav-container"></div>
       
   

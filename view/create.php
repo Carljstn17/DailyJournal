@@ -23,24 +23,30 @@ check_login($conn);
   </script>
 </head>
 <body data-page="create">
-
+  <div class="body">
   <p>Create Journal</p>
   
   <main>
     <form id="insert-form" class="insert-form" action="../controller/insert.php" method="post">
-    <label for="title" class="primary title">Title |</label>
-    <input type="text" id="title" name="title" class="title-text secondary" placeholder="Create title*" required>
+    
+    <div class="form-head">
+      <label for="title" class="primary title">Title |</label>
+      <input type="text" id="title" name="title" class="title-text secondary" placeholder="Create title*" required>
+    </div>
 
-    <label for="combo">Category </label>
-    <select id="combo" name="category" class="default">
-      <option value="Personal">Personal</option>
-      <option value="Professional">Professional</option>
-      <option value="Travel">Travel</option>
-    </select>
+    <div class="form-sub">
+      <label for="combo">Category </label>
+      <select id="combo" name="category" class="default">
+        <option value="Personal">Personal</option>
+        <option value="Professional">Professional</option>
+        <option value="Travel">Travel</option>
+      </select>
+    
 
     <label for="date">Select a date:</label>
     <input type="date" id="date" name="date" class="default">
-
+    </div>
+    
     <textarea name="content" id="textarea" class="default"></textarea>
 
     <input type="submit" value="Publish" class="btnn default">
@@ -51,7 +57,8 @@ check_login($conn);
   <footer>
     <p class="h2">© 2023 Project <span class="right">10/09/23</span></p>
   </footer>  
-
+  </div>
+  
   <div id="nav-container"></div>
 
 </body>

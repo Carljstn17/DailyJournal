@@ -4,8 +4,12 @@ body{
   align-items: center;
   padding: 0 16px;
 }
-header,main,footer{
+div.body{
   width: 516px;
+  margin: 0 auto;
+}
+header,main,footer{
+  width: 100%;
 }
 .desc{
   padding: 26px 0;
@@ -39,4 +43,29 @@ div.container{
 .row:hover{
 	scale: 1.05;
 	transition: 0.2s all ease-in;
+}
+
+/* Apply responsive design using media queries */
+@media screen and (max-width: 546px) {
+  body {
+    width: 92%;
+  }
+
+  div.content {
+    font-size: 12px;
+  }
+
+  img {
+    width: 100%; /* Make images full-width on smaller screens */
+  }
+
+  .grid-container {
+    flex-direction: column; /* Change the layout to a column on smaller screens */
+    width: 100%;
+  }
+
+  .left-image, .right-images {
+    width: 100%; /* Make left and right images full-width on smaller screens */
+  }
+
 }
