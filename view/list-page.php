@@ -21,6 +21,7 @@ check_login($conn);
       $("#nav-container").replaceWith(data);
   });
   </script>
+  <script src="../js/navlist.js"></script>
 </head>
 <body data-page="list">
   <div class="body">
@@ -30,12 +31,20 @@ check_login($conn);
     <p class="desc">In the pages of a journal, our stories come alive, whispered to the <span class="primary">future</span></p>
   </header>
 
+  <nav class="navbar">
+            <ul>
+                <li class="nav-item Home active" onclick="showCategory('Home')">Home</li>
+                <li class="nav-item Personal" onclick="showCategory('Personal')">Personal</li>
+                <li class="nav-item School" onclick="showCategory('School')">School</li>
+                <li class="nav-item Peers" onclick="showCategory('Peers')">Peers</li>
+                <li class="nav-item Others" onclick="showCategory('Others')">Others</li>
+            </ul>
+        </nav>
+
   <main>
 
-    <p class="secondary">Home</p>
-
-    <p class="small">Excellence is not a skill. It is an attitude.</p>
-    <div class="container">
+    <div class="container Home">
+      <p class="secondary">Excellence is not a skill. It is an attitude.</p>
 
       <?php
       $user_id=$_SESSION['user_id'];
@@ -60,11 +69,9 @@ check_login($conn);
       ?>
     </div>
   
-    <p class="secondary">Personal</p>
+    <div class="container Personal"  style="display:none;">
 
-    <p class="small">In the quiet moments, soul speaks loudest.</p>
-    <div class="container">
-
+      <p class="secondary">In the quiet moments, soul speaks loudest.</p>
       <?php
       $user_id=$_SESSION['user_id'];
 
@@ -87,12 +94,9 @@ check_login($conn);
       ?>
     </div>
 
+    <div class="container School"  style="display:none;">
 
-    <p class="secondary">School</p>
-
-    <p class="small">Sweat is the ink, effort is the story.</p>
-    <div class="container">
-
+      <p class="secondary">Sweat is the ink, effort is the story.</p>
       <?php
       $user_id=$_SESSION['user_id'];
 
@@ -114,10 +118,9 @@ check_login($conn);
       ?>
     </div>
 
-    <p class="secondary">Peers</p>
+    <div class="container Peers"  style="display:none;">
 
-    <p class="small">Every step forward is a dance of progress.</p>
-    <div class="container">
+    <p class="secondary">Every step forward is a dance of progress.</p>
 
       <?php
       $user_id=$_SESSION['user_id'];
@@ -140,11 +143,10 @@ check_login($conn);
       ?>
     </div>
 
-    <p class="secondary">Others</p>
+    
+    <div class="container Others"  style="display:none;">
 
-    <p class="small">The beauty of life lies in our connections with others.</p>
-    <div class="container">
-
+      <p class="secondary">The beauty of life lies in our connections with others.</p>
       <?php
       $user_id=$_SESSION['user_id'];
 
@@ -174,7 +176,10 @@ check_login($conn);
   </div>
   
   <div id="nav-container"></div>
-      
   
+  <script>
+    
+  </script>
+
 </body>
 </html>

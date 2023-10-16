@@ -2,17 +2,18 @@ body{
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
+
 }
 div.body{
   width: 516px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 header,main,footer{
   width: 100%;
 }
-.small{
-  font-size: 14px;
+.h1{
+  font-size: 16px;
 }
 .desc{
   padding: 26px 0;
@@ -56,11 +57,10 @@ footer p{
 }
 /* Apply responsive design using media queries */
 @media screen and (max-width: 546px) {
-  body{
-    padding: 0;
-  }
+
   div.body {
     width: 100%;
+    padding: 0;
   }
 
   div.content {
@@ -80,4 +80,27 @@ footer p{
     width: 100%; /* Make left and right images full-width on smaller screens */
   }
 
+}
+
+
+
+
+.navbar {
+  overflow: hidden;
+  padding: 26px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li:hover{
+  color: red;
+}
+
+.nav-item.active {
+  color: #F0F0F0;
 }

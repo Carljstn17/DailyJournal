@@ -13,7 +13,7 @@
       $("#nav-container").replaceWith(data);
   });
   </script>
-  
+    <script src="../js/gallery.js"></script>
 </head>
 <body data-page="gallery">
   <main>
@@ -26,31 +26,31 @@
         <p class="desc">A picture is a poem without <span class="primary">words</span></p>
       </div>
       
-      <div class="content">
+      <div class="content main">
         <p><span class="secondary">Photography</span> <span class="right">10/09/23</span></p>
         <img src="../media/capture.jpeg" alt="">
       </div>
 
       <div class="content">
         <p><span id="title" class="secondary">Life cycle</span> <span class="right">10/09/23</span></p>
-
+    
         <div class="grid-container">
-          <img class="left-image" src="../media/img1.jpg" alt="Left Image" id="myImage">
-          <div class="right-images">
-              <img class="right-image" src="../media/img3.jpeg" alt="Right Image 1" id="myImage2">
-              <img class="right-image" src="../media/img4.jpg" alt="Right Image 2" id="myImage3">
-          </div>
+            <img class="left-image" src="../media/img1.jpg" alt="Left Image" id="myImage">
+            <div class="right-images">
+                <img class="right-image" src="../media/img3.jpeg" alt="Right Image 1" id="myImage2">
+                <img class="right-image" src="../media/img4.jpg" alt="Right Image 2" id="myImage3">
+            </div>
         </div>
-
+    
         <div class="nav-container">
-          <ul class="nav-link">
-            <li id="change-img1">1</li>
-            <li id="change-img2">2</li>
-            <li id="change-img3">3</li>
-          </ul>
+            <ul class="nav-link">
+                <li id="change-img1">1</li>
+                <li id="change-img2">2</li>
+                <li id="change-img3">3</li>
+            </ul>
         </div>
-      
-      </div>
+    </div>
+    
 
       <div class="content">
 
@@ -91,7 +91,32 @@
 
   <div id="nav-container"></div>
 
-  <script src="/js/gallery.js"></script>
+  <script>
+    function showImage(category, image1, image2, image3) {
+  var titleElement = document.getElementById("title");
+  var oneImageElement = document.getElementById("myImage");
+  var twoImageElement = document.getElementById("myImage2");
+  var threeImageElement = document.getElementById("myImage3");
+
+  titleElement.textContent = category;
+  oneImageElement.src = image1;
+  twoImageElement.src = image2;
+  threeImageElement.src = image3;
+}
+
+document.getElementById("change-img1").addEventListener('click', function() {
+  showImage("Life cycle", '../media/img1.jpg', '../media/img3.jpeg', '../media/img4.jpg');
+});
+
+document.getElementById("change-img2").addEventListener('click', function() {
+  showImage("Underworld", '../media/img2.jpg', '../media/img6.jpeg', '../media/img5.jpg');
+});
+
+document.getElementById("change-img3").addEventListener('click', function() {
+  showImage("Live", '../media/img7.jpg', '../media/img8.jpg', '../media/img9.jpeg');
+});
+
+  </script>
 
 </body>
 </html>
