@@ -1,3 +1,6 @@
+body{
+  font-size: 16px;
+}
 div.container ,footer{
   display: grid;
   justify-content: center;
@@ -10,9 +13,10 @@ div.content{
   display: grid;
   align-items: center;
   width: 100%;
-  font-size: 14px;
 }
-
+.main{
+  margin-bottom: 3rem;
+}
 .desc{
   padding: 26px 0;
   font-size: 26px;
@@ -37,9 +41,8 @@ ul, li{
   display: inline-block;
 
 }
-li:hover{
-  background-color:#080808;
-  border-radius: 8px;
+.nav-link li:hover{
+  color: red;
 }
 /*gallery*/
 
@@ -81,6 +84,7 @@ footer{
 @media screen and (max-width: 546px) {
   div.container, footer, .music-container {
     width: 92%;
+    padding: 0;
   }
 
   div.content {
