@@ -4,6 +4,11 @@ session_start();
 include("../controller/function.php");
 include_once("../controller/connection.php");
 check_login($conn);
+
+$form_id = $_GET['form_id'];
+
+$query = mysqli_query($conn,"SELECT * FROM form WHERE form_id='$form_id'"); 
+$row = mysqli_fetch_array($query);
 ?>
 
 <!DOCTYPE html>
@@ -22,22 +27,26 @@ check_login($conn);
   });
   </script>
 </head>
-<body data-page="create">
+<body data-page="list">
   <div class="body">
-  <p>Create Journal</p>
+  <p>Edit Journal</p>
   
   <main>
-    <form id="insert-form" class="insert-form" action="../controller/insert.php" method="post">
+    <form id="insert-form" class="insert-form" action="../controller/editformvalid.php" method="post">
+
     
     <div class="form-head">
+    <p class="form-id">Form no. <?php echo $row['form_id'] ?></p>
+    <input type="hidden" name="form_id" value="<?php echo $row['form_id'] ?>">
+
       <label for="title" class="primary title">Title |</label>
-      <input type="text" id="title" name="title" class="title-text secondary" placeholder="Create title*" required>
-    </div>
+      <input type="text" id="title" name="title" class="title-text secondary" placeholder="<?php echo $row['title']?>">
+    </div> 
 
     <div class="form-sub">
       <div>
         <label for="combo">Category </label>
-        <select id="combo" name="category" class="default">
+        <select id="combo" name="category" class="default" <?php echo $row['category'] ?>>
           <option value="Home">Home</option>
           <option value="Personal">Personal</option>
           <option value="School">School</option>
@@ -52,9 +61,10 @@ check_login($conn);
       </div>
     </div>
     
-    <textarea name="content" id="textarea" class="default"></textarea>
+    <textarea name="content" id="textarea" class="default"><?php echo $row['content'] ?></textarea>
 
-    <input type="submit" value="Publish" class="btnn default">
+    <input type="submit" value="Save" class="edit default">
+    <button class="btnn default"><a href="javascript:history.go(-1)">Back</a></button>
   </form>
 
   </main>

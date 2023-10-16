@@ -11,6 +11,9 @@ div.body{
 header,main,footer{
   width: 100%;
 }
+.small{
+  font-size: 14px;
+}
 .desc{
   padding: 26px 0;
   font-size: 26px;
@@ -44,11 +47,20 @@ div.container{
 	scale: 1.05;
 	transition: 0.2s all ease-in;
 }
+.right{
+  float: right;
+}
 
+footer p{
+  margin-bottom: 8rem;
+}
 /* Apply responsive design using media queries */
 @media screen and (max-width: 546px) {
-  body {
-    width: 92%;
+  body{
+    padding: 0;
+  }
+  div.body {
+    width: 100%;
   }
 
   div.content {
