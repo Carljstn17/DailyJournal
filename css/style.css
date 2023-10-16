@@ -3,22 +3,20 @@ body{
   display: flex;
   justify-content: right;
   align-items: center;
-  margin: 6rem;
-  background-image: url('../media/full-logo.png');
-  background-repeat: no-repeat;
-  background-position: 3rem 11rem;
-  background-attachment: fixed;
 }
 .container{
   width: 300px;
   padding: 4rem;
   background-color: #181818;
   border-radius: 8px;
+  margin: 4rem auto;
 }
 .login-form,.signup-form{
   margin-left: -1rem;
 }
-
+.logo{
+  width: 150px;
+}
 .form-group {
   position: relative;
   margin-bottom: 25px;

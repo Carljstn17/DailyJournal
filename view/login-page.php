@@ -15,7 +15,7 @@ session_start();
 <body>
   <div class="container">
     <form id="login-form" class="login-form" action="../controller/login.php" method="post">
-        <h2 class="primary">/welcome</h2>
+        <h2 class="primary"><img src="../media/full-logo.png" alt="logo" class="logo"></h2>
         <div class="form-group">
             <input type="text" id="user_name" name="user_name" required>
             <label for="user_name">Username</label>
@@ -32,7 +32,7 @@ session_start();
     </form>
 
     <form id="signup-form" class="signup-form" action="../controller/signup.php" method="post">
-        <h2>/signup</h2>
+        <h2>signup</h2>
         <div class="form-group">
           <input type="text" id="user_name" name="user_name" required>
           <label for="user_name">Create Username</label>
