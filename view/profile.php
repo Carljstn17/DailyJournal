@@ -13,6 +13,7 @@ check_login($conn);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile</title>
   <link rel="stylesheet" href="../css/profile.css">
+  <link rel="icon" type="image/x-icon" href="../media/favicon-white.png">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -74,6 +75,9 @@ check_login($conn);
           edit
         </span></button></a>
     </div>
+
+    <?php if(isset($_SESSION['user_id'])) { echo '<a href="../controller/logout.php" class="logout">Logout</a>';}
+            else ?>
 
     <div class="grid-row-3">
       <iframe width="100%" height="300px" src="https://www.youtube.com/embed/V8pimNR30Fo?controls=0&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>

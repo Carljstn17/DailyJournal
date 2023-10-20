@@ -14,6 +14,7 @@ check_login($conn);
   <title>Create</title>
   <link rel="stylesheet" href="../css/default.css">
   <link rel="stylesheet" href="../css/list.css">
+  <link rel="icon" type="image/x-icon" href="../media/favicon-white.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>

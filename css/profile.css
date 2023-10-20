@@ -177,3 +177,15 @@ footer {
 
   
 }
+
+a.logout{
+  list-style: none;
+  text-decoration: none;
+  color: #696969;
+  cursor: pointer;
+  transition: .5s;
+}
+
+a.logout:hover{
+  color: red;
+}
