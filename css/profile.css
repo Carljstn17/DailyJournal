@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
-
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 * {
   margin: 0;
@@ -10,159 +9,161 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #101010; /* Dark background */
-  color: #e0e0e0; /* Light text color */
-  height: 1150px;
-  
+  background-color: #101010;
+  color: #e0e0e0;
+  font-size: 16px;
 }
-
-
-
-.nav-con{
-  display: flex;
-  background-color: #222;
-  box-shadow: 0 4px 8px #222;
-  font-size: 10px;
-  padding: 5px;
-  border-radius: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width:  10px;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-  top: 8.5%;
-  min-width: 110px;
-  opacity:inherit;
-}
-
-.nav-con a {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 10px;
-  
-}
-
-.dot {
-  height: 17px;
-  width: 17px;
-  background-color: #868686;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot:hover {
-  transition: 0.6s ease-in-out;
-  background-color: #e4e4e4;
-  transform: translatey(-15%);
-}
-.dot.active {
-  transition: 0.6s ease-in-out;
-  background-color: #e4e4e4;
-  transform: translatey(-15%);
-}
-
-
-
 
 .grid-container {
-  border-radius: 16px;
-  background-color: #181818; /* Dark container background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  max-width: 450px;
-  margin: 40px auto;
-  padding: 10px;
-  text-align: start;
-  margin-top: 7%;
-}
-
-.image-container {
-  height: 370px;
-  margin: 10px auto 5px;
-  overflow: hidden;
-  width: 400px;
-  position: relative;
-}
-
-.image-container img {
-  margin-top: 10px;
-  border-radius: 8px;
-  height: 350px;
-  width: 100%;
-  object-fit:cover;
-  display: block;
-}
-
-.image-text {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  grid-template-rows: 100px 100px 150px;
+  row-gap: 20px;
+  width: 100%;
+  max-width: 516px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.grid-row-1,
+.grid-row-2,
+.grid-row-3 {
+  width: 516px;
+  min-width: 60%;
+  max-width: 100%;
+}
+
+.grid-row-1 {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.grid-row-2 {
+  display: flex;
+  gap: 20px;
+}
+
+.grid-row-2 form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.grid-row-2 .desc {
+  color: #686868;
+  font-size: 25px;
+}
+p.h1{
+  font-size: 12px;
+  color: #696969;
+  margin-bottom: 20px;
+}
+p.desc {
+  padding-top: 10px;
+}
+
+.grid-row-3 {
+  background-color: #e0e0e0;
+}
+
+.edit-input,
+input.name,
+input.desc {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  color: #e0e0e0;
+  background-color: #101010;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#edit,
+#save {
+  background: #101010;
+  height: 30px;
+  width: 100%;
+  border: none;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 26;
+  opacity: 100;
+  padding: 1px 1px;
+}
+
+.grid-container.gallery {
+  display: flex;
+  gap: 12px;
   flex-direction: column;
-  border-radius: 20px;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  color: #fff;
-  background: #222;
 }
 
-.image-text:hover {
-  opacity: .9;
-  color: #fff;
+.left-image,
+.right-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
-.image-text p {
-  color: #fff;
-  font-size: 22px;
-}
-
-.bottom-container {
-  padding: 15px;
-  margin-left: 14px;
-}
-
-.name {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-top: 1px;
-  color: #696969; /* Light text color */
-}
-
-.grid-container1 {
-  border-radius: 16px;
-  background-color: #181818; /* Dark container background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  max-width: 450px;
-  height: 450px;
-  margin: 10px auto;
-  padding: 10px;
-  text-align: start;
-  margin-top: 10px;
-  position: relative;
-  margin-top: 5%;
-  
-}
-
-.iframe {
+.right-images {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 50%;
 }
 
+footer {
+  padding: 34px 0;
+}
 
-
-@media (max-width: 480px) {
-  .nav {
-    width: 350px;
-    min-width: 350px;
+/* Responsive */
+@media screen and (max-width: 546px) {
+  .grid-container,
+  footer {
+    width: 100%;
+    padding: 0;
+    font-size: 12px;
   }
+
+  .grid-container.gallery {
+    flex-direction: column;
+  }
+
+  .grid-container,
+  .left-image,
+  .right-image {
+    width: 100%;
+  }
+
+  img,
+  audio {
+    width: 100%;
+  }
+
+  .grid-row-1 img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .grid-row-1,
+  .grid-row-2,
+  .grid-row-3 {
+    width: 100%;
+  }
+
+  input.name,
+  input.desc,
+  .edit-input,
+  #edit,
+  #save {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  
 }

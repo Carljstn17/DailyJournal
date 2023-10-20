@@ -27,7 +27,7 @@ session_start();
 
                 $_SESSION['user_name'] = $user_data['user_name'];
                 $_SESSION['user_id'] = $user_data['user_id'];
-                header("Location: ../index.php");
+                header("Location: ../view/profile.php");
                 die;
               }
           }
