@@ -26,6 +26,8 @@ check_login($conn);
 
 <main>
   <div class="grid-container">
+
+    <p class="h1">Profile</p>
     
     <div class="grid-row-1">
 
@@ -38,8 +40,8 @@ check_login($conn);
 
         while($row = mysqli_fetch_assoc($result)){
           ?>
-          <p class="h1">Profile</p>
-          <h1 class="username">@<?php echo $row['user_name']; ?></h1>
+
+          <p class="username">@<?php echo $row['user_name']; ?></p>
 
           <?php
         }
@@ -62,13 +64,13 @@ check_login($conn);
           $descr = "no description yet.";
         }
         ?>
-        <p class="desc" name="descr"><?php echo $descr; ?></p>
+        <textarea class="desc" name="descr" readonly><?php echo $descr; ?></textarea>
 
         <?php
       }
 
       ?>
-      <a href="edit-profile.php"><button id="edit"><span class="material-symbols-outlined">
+      <a href="edit-profile.php?user_id=<?php echo$user_id;?>"><button id="edit"><span class="material-symbols-outlined">
           edit
         </span></button></a>
     </div>

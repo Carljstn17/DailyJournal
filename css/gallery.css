@@ -87,10 +87,6 @@ footer{
     padding: 0;
   }
 
-  div.content {
-    font-size: 12px;
-  }
-
   img {
     width: 100%; /* Make images full-width on smaller screens */
   }

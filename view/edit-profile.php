@@ -5,6 +5,10 @@ include("../controller/function.php");
 include_once("../controller/connection.php");
 
 check_login($conn);
+$user_id = $_GET['user_id'];
+
+$query = mysqli_query($conn,"select * from user_info where user_id='$user_id'"); 
+$row = mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,32 +30,22 @@ check_login($conn);
  
 <main>
   <div class="grid-container">
+
+  <p class="h1">Profile</p>
+
     <div class="grid-row-1">
       
       <div class="name-con">
-      <?php
-      $user_id=$_SESSION['user_id'];
 
-      $query = "SELECT user_name FROM user_info WHERE user_id = '$user_id' ";
-      $result = mysqli_query($conn, $query);     
-
-      while($row = mysqli_fetch_assoc($result)){
-      ?>
-      <p class="h1">Profile</p>
-       <h1 class="username">@<?php echo $row['user_name']; ?></h1>
+       <p class="username">@<?php echo $row['user_name']; ?></p>
       
-        <?php
-      }
-      
-
-      ?>
       
       </div>
       
     </div>
     <div class="grid-row-2">
       <form action="../controller/insert-desc.php" method="post">
-    <input type="text" class="desc"  name="descr" placeholder="enter description">
+    <textarea type="text" class="desc"  name="descr" ><?php echo $row['descr'] ?></textarea>
     <button type="submit" name="submit" id="save" title="save" ><span class="material-symbols-outlined">
 reply
 </span></button>
