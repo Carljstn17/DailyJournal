@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,100&display=swap');
+:root{
+  --grey:#181818;
+}
 body{
   height: 100%;
   display: flex;
@@ -6,10 +10,10 @@ body{
 }
 .container{
   width: 300px;
-  padding: 4rem;
+  padding: 2rem 3rem 3rem 3rem;
   background-color: #181818;
   border-radius: 8px;
-  margin: 4rem auto;
+  margin: 8rem auto;
 }
 .login-form,.signup-form{
   margin-left: -1rem;
@@ -29,7 +33,23 @@ body{
 .form-container .active {
   display: block;
 }
-
+h2{
+  text-align: center;
+}
+.normal{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  
+}
+.italic{
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: -3rem;
+  font-weight: thin;
+  font-style: italic;
+}
 input {
   width: 100%;
   padding: 10px;
@@ -39,6 +59,7 @@ input {
   background-color: #101010;
   border-radius: 6px;
   color: #696969;
+  margin-bottom: 4px;
 }
 label {
   position: absolute;
@@ -48,13 +69,14 @@ label {
   pointer-events: none;
   font-size: 16px;
   color: #696969;
+
 }
 input:focus ~ label, input:valid ~ label {
   top: -20px;
   color: 	#8f8989;
 }
 h2{
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .btn{
   padding: 10px 2rem;
