@@ -115,3 +115,9 @@ h2{
 a:hover{
   color: #C0C0C0;
 }
+
+@media screen and (max-width: 360px) {
+  .container{
+    margin: 0;
+  }
+}
